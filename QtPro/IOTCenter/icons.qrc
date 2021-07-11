@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>begin.png</file>
+        <file>button.png</file>
+        <file>colors.png</file>
+        <file>debug.png</file>
+        <file>direction_up_down.png</file>
+        <file>info.png</file>
+        <file>led-on.png</file>
+        <file>list.png</file>
+        <file>number.png</file>
+        <file>videoplay.png</file>
+        <file>bottom.png</file>
+        <file>right.png</file>
+        <file>stop.png</file>
+        <file>top.png</file>
+        <file>left.png</file>
+    </qresource>
+</RCC>
