@@ -5,11 +5,15 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT += network
+QT      += network
+QT      += sql
+QT      += webkitwidgets
+
 include(led.pri)
 include(color.pri)
 include(button.pri)
 include(dircontrol.pri)
+include(card.pri)
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = IOTCenter
@@ -31,6 +35,9 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         centerwindow.cpp \
+    mainwindow.cpp \
+    homeform.cpp \
+    emqxform.cpp \
     mqtt/qmqtt_client_p.cpp \
     mqtt/qmqtt_client.cpp \
     mqtt/qmqtt_frame.cpp \
@@ -46,6 +53,9 @@ SOURCES += \
 
 HEADERS += \
         centerwindow.h \
+    mainwindow.h \
+    homeform.h \
+    emqxform.h \
     mqtt/qmqtt_client_p.h \
     mqtt/qmqtt_client.h \
     mqtt/qmqtt_frame.h \
@@ -67,7 +77,10 @@ HEADERS += \
     mqtt/qmqtt.h
 
 FORMS += \
-        centerwindow.ui
+        centerwindow.ui \
+    mainwindow.ui \
+    homeform.ui \
+    emqxform.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

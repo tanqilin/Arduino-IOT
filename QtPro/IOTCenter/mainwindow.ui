@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>936</width>
+    <height>464</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="2,8">
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>75</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>75</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="Card" name="card">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>151</width>
+             <height>53</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="displayModel" stdset="0">
+            <enum>Card::horizontal</enum>
+           </property>
+           <property name="cardIcon">
+            <string>://server.png</string>
+           </property>
+           <property name="cardTitle" stdset="0">
+            <string>EMQX</string>
+           </property>
+           <property name="cardContent" stdset="0">
+            <string>服务运行中</string>
+           </property>
+           <property name="fontSize" stdset="0">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="Card" name="card_2">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>10</y>
+             <width>150</width>
+             <height>53</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="displayModel" stdset="0">
+            <enum>Card::horizontal</enum>
+           </property>
+           <property name="cardIcon">
+            <string>://home.png</string>
+           </property>
+           <property name="cardTitle" stdset="0">
+            <string>我的家</string>
+           </property>
+           <property name="cardContent" stdset="0">
+            <string>Manager My Home</string>
+           </property>
+           <property name="fontSize" stdset="0">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="Card" name="card_3">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>9</y>
+             <width>150</width>
+             <height>53</height>
+            </rect>
+           </property>
+           <property name="displayModel" stdset="0">
+            <enum>Card::horizontal</enum>
+           </property>
+           <property name="cardIcon">
+            <string>://android.png</string>
+           </property>
+           <property name="cardTitle" stdset="0">
+            <string>APP管理</string>
+           </property>
+           <property name="cardContent" stdset="0">
+            <string>Android APP</string>
+           </property>
+           <property name="fontSize" stdset="0">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="Card" name="card_4">
+           <property name="geometry">
+            <rect>
+             <x>520</x>
+             <y>9</y>
+             <width>150</width>
+             <height>53</height>
+            </rect>
+           </property>
+           <property name="displayModel" stdset="0">
+            <enum>Card::horizontal</enum>
+           </property>
+           <property name="cardIcon">
+            <string>://settings.png</string>
+           </property>
+           <property name="cardTitle" stdset="0">
+            <string>系统设置</string>
+           </property>
+           <property name="cardContent" stdset="0">
+            <string>System Setting</string>
+           </property>
+           <property name="fontSize" stdset="0">
+            <number>10</number>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>936</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Card</class>
+   <extends>QWidget</extends>
+   <header>card.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -28,6 +28,11 @@ void Button::setToggle(bool checked)
     m_timer.start(5);
 }
 
+bool Button::getToggle()
+{
+    return m_bChecked;
+}
+
 void Button::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
@@ -60,6 +65,9 @@ void Button::paintEvent(QPaintEvent *event)
     painter.setBrush(thumbColor);
     painter.setOpacity(1.0);
     painter.drawEllipse(QRectF(m_nX, 0, height(), height()));
+    painter.save();
+    painter.restore();
+    painter.end();
 }
 
 // 鼠标按下

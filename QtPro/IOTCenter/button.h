@@ -13,6 +13,7 @@ public:
 
     void setCheckedColor(QColor color);     // 设置开关选中颜色
     void setToggle(bool checked);           // 设置开关状态
+    bool getToggle();
 
 protected:
     void paintEvent(QPaintEvent *event);

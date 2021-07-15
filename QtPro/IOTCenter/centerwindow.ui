@@ -60,16 +60,6 @@
      </item>
     </layout>
    </widget>
-   <widget class="DIRControl" name="dIRControl">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>200</y>
-      <width>200</width>
-      <height>120</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="Button" name="button">
     <property name="geometry">
      <rect>
@@ -87,6 +77,16 @@
       <y>10</y>
       <width>191</width>
       <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="DIRControl" name="dIRControl">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>200</y>
+      <width>200</width>
+      <height>120</height>
      </rect>
     </property>
    </widget>
@@ -109,7 +109,6 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
