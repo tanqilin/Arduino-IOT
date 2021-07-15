@@ -60,6 +60,9 @@ void Button::paintEvent(QPaintEvent *event)
     painter.setBrush(thumbColor);
     painter.setOpacity(1.0);
     painter.drawEllipse(QRectF(m_nX, 0, height(), height()));
+    painter.save();
+    painter.restore();
+    painter.end();
 }
 
 // 鼠标按下

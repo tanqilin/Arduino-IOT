@@ -1,7 +1,7 @@
 #ifndef NUMBERPLUGIN_H
 #define NUMBERPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class NumberPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

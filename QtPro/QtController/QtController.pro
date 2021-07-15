@@ -2,8 +2,10 @@ CONFIG      += plugin debug_and_release
 TARGET      = $$qtLibraryTarget(qtcontrollerplugin)
 TEMPLATE    = lib
 
-HEADERS     = colorplugin.h ledplugin.h videoplugin.h debugplugin.h buttonplugin.h listplugin.h dircontrolplugin.h numberplugin.h infoplugin.h qtcontroller.h
-SOURCES     = colorplugin.cpp ledplugin.cpp videoplugin.cpp debugplugin.cpp buttonplugin.cpp listplugin.cpp dircontrolplugin.cpp numberplugin.cpp infoplugin.cpp qtcontroller.cpp
+HEADERS     = colorplugin.h ledplugin.h videoplugin.h debugplugin.h buttonplugin.h listplugin.h dircontrolplugin.h numberplugin.h infoplugin.h qtcontroller.h \
+    cardplugin.h
+SOURCES     = colorplugin.cpp ledplugin.cpp videoplugin.cpp debugplugin.cpp buttonplugin.cpp listplugin.cpp dircontrolplugin.cpp numberplugin.cpp infoplugin.cpp qtcontroller.cpp \
+    cardplugin.cpp
 RESOURCES   = icons.qrc
 LIBS        += -L. 
 
@@ -25,3 +27,4 @@ include(led.pri)
 include(list.pri)
 include(button.pri)
 include(info.pri)
+include(card.pri)

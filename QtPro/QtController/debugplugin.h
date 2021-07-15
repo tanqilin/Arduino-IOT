@@ -1,7 +1,7 @@
 #ifndef DEBUGPLUGIN_H
 #define DEBUGPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class DebugPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

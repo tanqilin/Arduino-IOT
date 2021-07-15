@@ -1,7 +1,7 @@
 #ifndef BUTTONPLUGIN_H
 #define BUTTONPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class ButtonPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

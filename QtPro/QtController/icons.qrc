@@ -14,5 +14,6 @@
         <file>left.png</file>
         <file>top.png</file>
         <file>bottom.png</file>
+        <file>card.png</file>
     </qresource>
 </RCC>

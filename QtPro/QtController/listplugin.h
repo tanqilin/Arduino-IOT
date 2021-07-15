@@ -1,7 +1,7 @@
 #ifndef LISTPLUGIN_H
 #define LISTPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class ListPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

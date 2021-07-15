@@ -7,6 +7,7 @@
 #include "dircontrolplugin.h"
 #include "numberplugin.h"
 #include "infoplugin.h"
+#include "cardplugin.h"
 #include "qtcontroller.h"
 
 QtController::QtController(QObject *parent)
@@ -21,6 +22,7 @@ QtController::QtController(QObject *parent)
     m_widgets.append(new DIRControlPlugin(this));
     m_widgets.append(new NumberPlugin(this));
     m_widgets.append(new InfoPlugin(this));
+    m_widgets.append(new CardPlugin(this));
 
 }
 

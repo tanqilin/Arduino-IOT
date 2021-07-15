@@ -1,7 +1,7 @@
 #ifndef DIRCONTROLPLUGIN_H
 #define DIRCONTROLPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class DIRControlPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

@@ -1,7 +1,7 @@
 #ifndef LEDPLUGIN_H
 #define LEDPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class LedPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

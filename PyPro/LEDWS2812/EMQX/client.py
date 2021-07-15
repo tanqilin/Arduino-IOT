@@ -23,9 +23,10 @@ class MqttClient(mqtt.Client):
         self.led.clearLed()
     
     def on_message(self, mqttc, obj, msg):
-        #print(msg.topic+" "+str(msg.qos)+" "+str(msg.payload))
+        print(msg.topic+" "+str(msg.qos)+" "+str(msg.payload))
         if msg.topic == "tanqilin/out@center":
             text = json.loads(msg.payload)
+            print(text)
             if text['order'] == 0:
                 self.led.openLed()
             elif text['order'] == 1:

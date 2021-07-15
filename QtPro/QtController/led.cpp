@@ -7,6 +7,7 @@ Led::Led(QWidget *parent) :
 {
     m_Color = Qt::gray;
     setCursor(Qt::PointingHandCursor);
+    lb = new QLabel(this);
 }
 
 void Led::mousePressEvent(QMouseEvent *event){
@@ -29,6 +30,9 @@ void Led::paintEvent(QPaintEvent *event)
 
     painter.setBrush(QBrush(color,Qt::Dense1Pattern));
     painter.drawEllipse(3, 3, width()-5, width()-5);
+    painter.save();
+    painter.restore();
+    painter.end();
 }
 
 QColor Led::getColor()

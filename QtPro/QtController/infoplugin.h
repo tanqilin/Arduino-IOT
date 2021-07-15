@@ -1,7 +1,7 @@
 #ifndef INFOPLUGIN_H
 #define INFOPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class InfoPlugin : public QObject, public QDesignerCustomWidgetInterface
 {

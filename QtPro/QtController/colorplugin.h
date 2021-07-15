@@ -1,7 +1,7 @@
 #ifndef COLORPLUGIN_H
 #define COLORPLUGIN_H
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 class ColorPlugin : public QObject, public QDesignerCustomWidgetInterface
 {
