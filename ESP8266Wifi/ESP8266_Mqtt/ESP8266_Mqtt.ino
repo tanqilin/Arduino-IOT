@@ -77,10 +77,6 @@ void receiveCallback(char* topic, byte* payload, unsigned int length){
   Serial.println("");
   Serial.print("Message：");
   Serial.println(msg);
-
-  // msg为json类型字符串，如需处理需要调用ArduinoJson库进行处理
-  String pub = "{\"result\":\"ok\"}";
-  mqttClient.publish(pubTopic,pub.c_str());
 }
 
 // 订阅主题
@@ -89,6 +85,9 @@ void subscribeTopic(){
   if(mqttClient.subscribe(subTopic, 0)){
     Serial.print("已成功订阅主题: ");
     Serial.println(subTopic);
+    // msg为json类型字符串，如需处理需要调用ArduinoJson库进行处理
+    String pub = "{\"result\":\"ok\"}";
+    mqttClient.publish(pubTopic,pub.c_str());
   } else {
     Serial.print("Subscribe Fail...");
   }  
