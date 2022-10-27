@@ -46,6 +46,7 @@ bool autoConfig(){
   File file = SPIFFS.open("/config.json", "r"); 
   deserializeJson(doc, file);
   file.close();
+  
   // 获取解析后的数据信息
   const char* wifi_ssid = doc["wifi"]["ssid"];
   const char* wifi_password = doc["wifi"]["password"];
@@ -166,6 +167,14 @@ bool handlePostRead(String path){
     String wifip = web_server.arg("password");
     Serial.println("收到配网信息，Wifi：" + wifis + ",密码：" + wifip);
     WiFi.begin(wifis,wifip);
+  }
+
+  if(path.endsWith("reset")){
+    Serial.println("重置网络状态成功，Wifi：清空,密码：清空");
+    // 把Wifi信息写入配置文件中
+    File dataFile = SPIFFS.open("/config.json", "w");
+    dataFile.println("");
+    dataFile.close(); 
   }
   
   while(WiFi.status() != WL_CONNECTED){

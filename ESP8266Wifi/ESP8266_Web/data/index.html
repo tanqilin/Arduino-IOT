@@ -13,7 +13,7 @@
   <div class="layui-row">
     <div class="layui-col-sm6 layui-col-sm-offset3">
 		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-			<legend>ESP8266-Web控制端</legend>
+			<legend>ESP8266-Web 配置网络</legend>
 		</fieldset>
 		<form class="layui-form" action="">
 			<div class="layui-form-item">
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div class="layui-form-item">
-				<label class="layui-form-label">输入Password:</label>
+				<label class="layui-form-label">请输入Password:</label>
 				<div class="layui-input-block">
 				  <input type="text" name="password" placeholder="Password" autocomplete="off" class="layui-input">
 				</div>
@@ -34,6 +34,12 @@
 				</div>
 			</div>
 		</form>
+		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+			<legend>重置设备状态</legend>
+		</fieldset>
+		<div class="layui-row">
+			<button id="reset" class="layui-btn layui-btn-fluid" >重置设备</button>
+		</div>
     </div>
   </div>
 </div>
@@ -47,11 +53,18 @@ layui.use(['layer', 'form'], function(){
   var layer = layui.layer
   ,form = layui.form, $=layui.$;
   
+	$("#reset").click(function(){
+		$.post("reset",{},
+		  function(data,status){
+			layer.msg('success'); 
+		  }
+		);
+	});
     form.on('submit(submitBtn)', function(data){
 		console.log(data.field)
 		$.post("config",data.field,
 		  function(data,status){
-			alert("Data: " + data + "\nStatus: " + status);
+			//alert("Data: " + data + "\nStatus: " + status);
 			layer.msg('success'); 
 		  }
 		);
