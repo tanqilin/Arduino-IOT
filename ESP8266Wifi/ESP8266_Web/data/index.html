@@ -52,7 +52,10 @@
 layui.use(['layer', 'form'], function(){
   var layer = layui.layer
   ,form = layui.form, $=layui.$;
-  
+	$.get("conf",function(data,status){
+		
+	})
+	
 	$("#reset").click(function(){
 		$.post("reset",{},
 		  function(data,status){
@@ -60,6 +63,7 @@ layui.use(['layer', 'form'], function(){
 		  }
 		);
 	});
+
     form.on('submit(submitBtn)', function(data){
 		console.log(data.field)
 		$.post("config",data.field,

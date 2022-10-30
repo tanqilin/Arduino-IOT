@@ -1,0 +1,12 @@
+{
+    "wifi":{
+        "ssid":"",
+        "password":""
+    },
+    "mqtt":{
+        "mqserver":"",
+        "mqport":"1883",
+        "mqname":"",
+        "mqpswd":""
+    }
+}
